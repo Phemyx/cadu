@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+public class Ex1 {
+	
+		public static void multiploDeCinco(char[] letras) {
+			
+			int soma = 0;
+			
+			for (char x : letras) {
+				soma += (int)x;
+			}
+			
+			int total = soma - letras.length * 64; 
+			
+			System.out.print("Soma dos valores : " + total);
+			
+				if(total %5 != 0) {
+					
+					System.out.println("\n Não é multiplo de 5!");
+				}
+				else {
+					
+					System.out.print("\nValor Multiplo de 5");
+				}
+		}
+		
+		public static void main(String[] args) {
+			
+			Scanner sc = new Scanner(System.in);
+			
+			char[] letras = null;
+			String palavra = sc.nextLine();
+			letras = palavra.toCharArray();
+			
+			multiploDeCinco(letras); 
+				
+			sc.close();
+			
+		}
+
+}
